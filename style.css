@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lexend Deca", sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    color: hsl(0, 0%, 100%);
+    min-height: 100vh;
+    display: flex; 
+    align-items: center;
+    font-size: 15px;
+}
+.container{
+    margin: 0 auto;
+    width: 1020px;
+}
+.block{
+    background-color: hsl(244, 38%, 16%);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image{
+    position: relative;
+} 
+.image::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color:  hsla(277, 64%, 61%, 0.6);
+    height: 100%;
+    width: 100%;
+    content: "";
+}
+.bar{
+   padding: 13%; 
+}
+h1{
+    font-weight: 700;
+    font-size: 2.1rem;
+    padding-bottom: 22px;
+}
+span{
+    color: hsl(277, 64%, 61%);
+}
+.subtitle{
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7;
+}
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+.flexbox h2{
+    margin-bottom: 7px;
+    font-size: 25px;
+}
+.flexbox p{
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media only screen and (max-width:768px) and (min-width:426px){
+
+    body{
+        font-size: 12px;
+    }
+
+    .bar{
+        padding: 12%;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+
+    .flexbox{
+        padding-top: 30px;
+    }
+
+    .flexbox h2{
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width:425px){
+    body{
+        text-align: center;
+    }
+
+    .block{
+        grid-template-columns: 1fr;
+    }
+
+    .image{
+        order:-1;
+    }
+
+    .bar{
+        padding: 12% 8%;
+    }
+
+    h1{
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    .flexbox{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .flexbox div{
+        margin-top: 20px;
+    }
+}
